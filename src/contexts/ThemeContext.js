@@ -4,12 +4,14 @@ export const ThemeContext = createContext()
 
 const darkTheme = {
     mainBackground: "#232931",
-    textColor: "#FEE715FF"
+    textColor: "#FEE715FF",
+    buttonBackground: "#393E46"
 }
 
 const lightTheme = {
-    mainBackground: "white",
-    textColor: "black"
+    mainBackground: "#E7EBE0FF",
+    textColor: "#28334AFF",
+    buttonBackground: "#7DB46CFF"
 }
 
 
@@ -17,7 +19,7 @@ const lightTheme = {
 function ThemeReducer(state, action) {
     switch (action.type) {
         case "CHANGE_THEME": {
-            return { ...state, isDarkTheme: action.payload }
+            return { ...state, theme: action.payload }
         }
         default: {
             return state;
@@ -26,12 +28,11 @@ function ThemeReducer(state, action) {
 }
 
 export const ThemeContextProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(ThemeReducer, { isDarkTheme: true })
+    const [state, dispatch] = useReducer(ThemeReducer, { theme: 'dark' })
 
-    let ui = state.isDarkTheme ? darkTheme : lightTheme 
+    let ui = state.theme === 'dark' ? darkTheme : lightTheme 
 
     const changeThemeAction = (bool) => {
-        console.log(bool)
         dispatch({
             type: "CHANGE_THEME",
             payload: bool

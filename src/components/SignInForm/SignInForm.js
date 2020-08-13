@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import './SignInForm.css'
 import {TextInput, PasswordInput} from '../Inputs/Inputs'
 import { SubmitButton } from '../Buttons/Buttons'
+import {FormsTitle} from '../Titles/Titles'
 
 function SignInForm({role}) {
     const [username, setUsername] = useState('')
@@ -20,7 +21,7 @@ function SignInForm({role}) {
 
     return (
         <div className="sign-in-form" style={{marginTop: margin}}>
-            <h1>Sign In</h1>
+            <FormsTitle text='Sign In'/>
             <TextInput value={username} setValue={setUsername}/>
             <PasswordInput value={password} setValue={setPassword} />
             <SubmitButton click={submitUserHandler} text="Sign In" name='button submit-button' />
