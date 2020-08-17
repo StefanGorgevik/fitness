@@ -7,6 +7,7 @@ import SignInForm from '../../components/SignInForm/SignInForm'
 import RegisterCoach from '../../components/RegisterCoach/RegisterCoach'
 import { SubmitButton } from '../../components/Buttons/Buttons'
 import { ThemeContext } from '../../contexts/ThemeContext'
+import { ChooseAuthTitle } from '../../components/Titles/Titles'
 
 
 function LandingPage() {
@@ -49,8 +50,8 @@ function LandingPage() {
             <div className="auth-div">
                 {role !== null &&
                     <div className="choose-auth-div" style={{ marginTop: roleChosen ? '-250px' : null, marginLeft: form && '-50px' }}>
-                        <h1 style={{color: ui.textColor}} className="choose-auth-h1" onClick={() => chooseAuthHandler('sign-in')} >Sign In as a {role} </h1>
-                        <h1 style={{color: ui.textColor}} className="choose-auth-h1" onClick={() => chooseAuthHandler('register')} >Register as a {role} </h1>
+                    <ChooseAuthTitle active={form === 'sign-in' ? true : false} click={() => chooseAuthHandler('sign-in')} text='Sign In' role={role}/>
+                    <ChooseAuthTitle active={form === 'register' ? true : false} click={() => chooseAuthHandler('register')} text='Register' role={role}/>
                     </div>}
 
 

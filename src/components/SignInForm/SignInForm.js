@@ -22,8 +22,8 @@ function SignInForm({role}) {
     return (
         <div className="sign-in-form" style={{marginTop: margin}}>
             <FormsTitle text='Sign In'/>
-            <TextInput value={username} setValue={setUsername}/>
-            <PasswordInput value={password} setValue={setPassword} />
+            <TextInput id='username' text='Username' value={username} setValue={setUsername}/>
+            <PasswordInput id="password" text='Password' value={password} setValue={setPassword} />
             <SubmitButton click={submitUserHandler} text="Sign In" name='button submit-button' />
 
         </div>

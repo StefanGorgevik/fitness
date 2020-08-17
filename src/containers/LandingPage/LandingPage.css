@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     height: 100%;
+    transition: 1s;
 }
 
 .choose-role-div {
@@ -12,15 +13,6 @@
     width: 50%;
     height: 100%;
     transition: 1s;
-}
-
-
-
-.choose-auth-h1 {
-    padding: 1%;
-    margin-left: 200px;
-    border-bottom: 1px solid #FEE715FF;
-    min-width: 40%;
 }
 
 .choose-auth-div {
@@ -39,4 +31,5 @@
     align-items: center;
     width: 100%;
     min-height: 50%;
+    transition: 1s;
  }

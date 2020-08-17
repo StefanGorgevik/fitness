@@ -24,10 +24,10 @@ function RegisterCoach({role}) {
     return (
         <div className="register-form" style={{ marginTop: margin }}>
             <FormsTitle text='Register' />
-            <TextInput value={username} setValue={setUsername} />
-            <TextInput value={username} setValue={setFullName} />
-            <TextInput value={username} setValue={setEmail} />
-            <PasswordInput value={password} setValue={setPassword} />
+            <TextInput text='Fullname' id='fullname' value={fullName} setValue={setFullName} />
+            <TextInput text='Username' id='username' value={username} setValue={setUsername} />
+            <TextInput text='Email' id='email' value={email} setValue={setEmail} />
+            <PasswordInput text='Password' id='password' value={password} setValue={setPassword} />
             <SubmitButton click={submitUserHandler} text="Register" name='button submit-button' />
         </div>
     )

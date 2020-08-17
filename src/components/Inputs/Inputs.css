@@ -4,7 +4,17 @@
     font-family: 'Markazi Text';
     padding: 1px;
     border: none;
-    margin: 1%;
+    margin: 1px auto;
     height: 30px;
+    font-size: 18px;
     width: 80%;
+}
+
+.input-div {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    align-items: baseline;
 }
