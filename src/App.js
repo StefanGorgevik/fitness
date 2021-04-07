@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Switch } from 'react-router-dom'
 import './App.css';
 import MainContainer from './containers/MainContainer/MainContainer';
 
-import {ThemeContextProvider} from './contexts/ThemeContext'
+import { ThemeContextProvider } from './contexts/ThemeContext'
+import { MainContextProvider } from './contexts/MainContext'
 
 class App extends Component {
   render() {
@@ -12,7 +13,9 @@ class App extends Component {
       <Router>
         <Switch>
           <ThemeContextProvider>
-            <MainContainer />
+            <MainContextProvider>
+              <MainContainer />
+            </MainContextProvider>
           </ThemeContextProvider>
         </Switch>
       </Router>

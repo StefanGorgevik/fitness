@@ -11,7 +11,7 @@ import { ChooseAuthTitle } from '../../components/Titles/Titles'
 
 
 function LandingPage() {
-    const {ui} = useContext(ThemeContext)
+    // const {ui} = useContext(ThemeContext)
 
     const [roleChosen, setRoleChosen] = useState(false)
     const [role, setRole] = useState(null)
